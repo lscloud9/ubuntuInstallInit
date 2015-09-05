@@ -1,0 +1,7 @@
+#!/bin/bash
+#install sublime
+echo "remove sublime 2"
+sudo apt-get remove axel --purge -y
+sudo rm -r /usr/lib/SublimeText2
+sudo rm /usr/bin/sublime
+sudo rm /usr/share/applications/sublime.desktop

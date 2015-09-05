@@ -1,0 +1,24 @@
+#!/bin/bash
+#install sublime
+echo "install sublime 2"
+sudo apt-get install axel
+axel http://c758482.r82.cf2.rackcdn.com/Sublime\ Text\ 2.0.2\ x64.tar.bz2
+tar jxvf Sublime\ Text\ 2.0.2\ x64.tar.bz2
+sudo rm Sublime\ Text\ 2.0.2\ x64.tar.bz2
+sudo mv Sublime\ Text\ 2 /usr/lib/SublimeText2
+sudo ln -s /usr/lib/SublimeText2/sublime_text /usr/bin/sublime
+sudo echo "[Desktop Entry]
+Version=1.0
+Name=Sublime Text 2
+GenericName=Text Editor
+Exec=sublime
+Terminal=false
+Icon=/usr/lib/SublimeText2/Icon/48x48/sublime_text.png
+Type=Application
+Categories=testEditor:IDE:Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnviroment=Unity" > sublime.desktop
+sudo mv sublime.desktop /usr/share/applications/sublime.desktop
