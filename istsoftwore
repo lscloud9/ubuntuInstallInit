@@ -99,6 +99,19 @@ sudo mv sublime.desktop /usr/share/applications/sublime.desktop
 sudo apt-get install openssh-server -y
 sudo sed -i 's/without-password/yes/g' /etc/ssh/sshd_config
 
+#firefox flash
+#install firefox flash plugin
+echo "install firefox flash plugin"
+mkdir firefoxflash
+cd firefoxflash
+axel https://fpdownload.adobe.com/get/flashplayer/pdc/11.2.202.508/install_flash_player_11_linux.x86_64.tar.gz
+tar zxvf install_flash_player_11_linux.x86_64.tar.gz 
+sudo cp libflashplayer.so /usr/lib/mozilla/plugins
+sudo cp -r usr/* /usr  
+cd ..
+sudo rm -r firefoxflash
+sudo rm install_flash_player_11_linux.x86_64.tar.gz 
+
 
 
 

@@ -3,4 +3,4 @@
 echo "remove chromium brower and flash plugin"
 sudo apt-get remove chromium-browser --purge -y
 sudo apt-get remove pepperflashplugin-nonfree --purge -y
-sudo update-pepperflashplugin-nonfree --install 
+sudo update-pepperflashplugin-nonfree --uninstall 
